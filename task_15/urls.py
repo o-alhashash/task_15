@@ -42,9 +42,9 @@ urlpatterns = [
     path('no-access/',views.no_access ,name='no-access'),
 
     path('api/list/', RestaurantListView.as_view(), name='api-list'),
-    path('api/<int:restaurant_id>/detail/', RestaurantDetailView.as_view(), name='api-detail'),
-    path('api/<int:restaurant_id>/update/', RestaurantUpdateView.as_view(), name='api-update'),
-    path('api/<int:restaurant_id>/delete/', RestaurantDeleteView.as_view(), name='api-delete'),
+    path('api/<pk>/detail/', RestaurantDetailView.as_view(), name='api-detail'),
+    path('api/<pk>/update/', RestaurantUpdateView.as_view(), name='api-update'),
+    path('api/<pk>/delete/', RestaurantDeleteView.as_view(), name='api-delete'),
 ]
 
 if settings.DEBUG:
